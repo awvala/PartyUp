@@ -1,0 +1,41 @@
+<!-- NOT USED
+<div class="container">
+
+  <div class="row">
+    <div class="col-sm-12">
+        <img src="/public/images/dndbanner.jpg" alt="Game banner image">
+    </div>
+<div class="col-sm-5">
+<h1 class="font gameName">{{this.game_name}}</h1>
+</div>
+    <div class="col-sm-7">
+      <h4 class="fontTwo game Genre">Genre: {{this.genre}}</h4>
+    </div>
+  </div>
+  <br>
+
+  {{#unless signedIn}}
+  <div class="row">
+    <div class="col-sm-12">
+      <h4 class="fontTwo">You must be signed in to view the parties available</h4>
+    </div>
+  </div>
+  {{/unless}} {{#if signedIn}} {{#unless partiesForGame}}
+  <div class="row">
+    <div class="col-sm-12">
+      <h4 class="fontTwo">No parties available for this game</h4>
+    </div>
+  </div>
+  {{/unless}}
+    <div class="row">
+    <div class="col-sm-12">
+      <h4 class="fontTwo">Parties Available for this game: </h4>
+    </div>
+  </div>
+  <div class="row wrapped gameContainer">
+    {{#each games}} {{> games/games-block}} {{/each}}
+  </div>
+  {{/if}}
+</div>
+
+-->

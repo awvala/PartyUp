@@ -1,0 +1,68 @@
+<div class="container">
+    <div class="gameBanner">
+        <div class="row">
+            <div class="col-sm-12">
+                <img class="adventurebanner" src="/images/adventurebackground.jpg" alt="Game banner image">
+            </div>
+        </div>
+        <div class="row gameInfo">
+            <h4 class="font userInfoText">{{user.username}}'s Dashboard</h4>
+        </div>
+    </div>
+
+    <div class="container playerPartiesContainer">
+        <div class="row">
+            <!-- Start Left Section -->
+            <div class="col-sm-4">
+                <h3 class="profile-label">Hosted Parties: </h3>
+                <br> {{#unless hostData}}
+                <div class="row">
+                    <div class="col-md-12">
+                        <p class="font">You're not hosting any parties right now </p>
+                    </div>
+                </div>
+                {{/unless}} {{#if hostData}}
+                <div class="gameContainer">
+                    {{#each hostData}} {{> parties/hosted-party-block}} {{/each}}
+                </div>{{/if}}
+            </div>
+            <!-- End left section -->
+
+            <!-- Center Section -->
+            <div class="col-sm-4 centerSection">
+                <div class="row">
+                    <div class="col-sm-12 center" id="create-party">
+                        <h3 class="font">Adventuring solo?</h3>
+                        <br>
+                        <p>Create your own party!</p>
+                        <!-- Button trigger modal -->
+                        <button type="button" class="btn btn-primary fontTwo" id="create-btn" data-toggle="modal" data-target="#gameModal">Create
+                            a Party</button>
+                        <br>
+                    </div>
+                </div>
+            </div>
+            <!-- End Center Section-->
+
+            <!-- Start Right section -->
+            <div class="col-sm-4">
+                <div class="row">
+                    <div class="col-sm-12">
+                        <h3 class="profile-label">Parties Joined: </h3>
+                        <br> {{#unless joinedParties}}
+                        <p class="font">Oh no! You're adventuring solo!</p>
+                        {{/unless}}
+                        <div class="gameContainer">
+                            {{#if userData}} {{> parties/partymember-block}} 
+                        {{/if}}
+                        </div>
+                        <br>
+                    </div>
+                </div>
+            </div>
+            <!-- End Right Section -->
+        </div>
+    </div>
+    {{> games/games-newparty}}
+    </div>
+    

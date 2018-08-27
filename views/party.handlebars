@@ -1,0 +1,48 @@
+<div class="container">
+    <div class="gameBanner">
+
+        <div class="row">
+            <div class="col-sm-12">
+                <img class="banner" src="{{gameLib.0.banner_img}}" alt="Game banner image">
+            </div>
+        </div>
+        <div class="row gameInfo">
+            <div class="col-sm-12">
+                <h5 class="font gameInfoText">{{gameLib.0.game_name}}</h5>
+            </div>
+        </div>
+    </div>
+    <br> {{#parties}}
+    <div class="partyContainer">
+        <h3 id="partyheader">Party: {{party_name}}</h3>
+        <hr>
+        <div class="row">
+            <!-- Left Section -->
+            <div class="col-sm-7">
+                <p><b>Description:</b> {{description}}</p>
+                <p><b>Experience Level:</b> {{player_exp_level}}</p>
+                <p><b>Maximum party members:</b> {{max_players}}</p>
+                <p><b>Location: </b>{{location}}</p>
+                <p><b>Date:</b> {{meeting_date}}</p>
+                <br> {{/parties}}
+            </div>
+            <!-- Right section -->
+            <div class="col-sm-5">
+                <h5 class="left black">Party Members:</h5>
+                <hr>
+                <ol>
+                    {{#userData}} {{> parties/user-block}} {{/userData}}
+                </ol>
+                <hr>
+            </div>
+        </div>
+        {{#parties}}
+        <p style="text-align: right;">
+            <button type="button" class="btn btn-primary" data-hostedId-type="{{hosted_gameid}}" id="join-party">Join
+                Party
+            </button>
+        </p>
+    </div>
+    {{/parties}}
+</div>
+</div>
