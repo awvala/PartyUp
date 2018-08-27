@@ -35,5 +35,17 @@
     "eslint-plugin-prettier": "^2.6.2",
     "mocha": "^5.2.0",
     "prettier": "^1.13.7"
-  }
+  },
+  "directories": {
+    "test": "test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/awvala/PartyUp.git"
+  },
+  "author": "",
+  "bugs": {
+    "url": "https://github.com/awvala/PartyUp/issues"
+  },
+  "homepage": "https://github.com/awvala/PartyUp#readme"
 }
