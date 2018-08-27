@@ -41,11 +41,11 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/awvala/PartyUp.git"
+    "url": "git+https://github.com/nbrasaemle/Group-Project-2.git"
   },
   "author": "",
   "bugs": {
-    "url": "https://github.com/awvala/PartyUp/issues"
+    "url": "https://github.com/nbrasaemle/Group-Project-2/issues"
   },
-  "homepage": "https://github.com/awvala/PartyUp#readme"
+  "homepage": "https://github.com/nbrasaemle/Group-Project-2#readme"
 }
